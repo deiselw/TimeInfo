@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="calendar_years_min">10</integer>
+    <integer name="calendar_years_default">100</integer>
+    <integer name="calendar_years_max">150</integer>
+</resources>

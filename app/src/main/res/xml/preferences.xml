@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<com.deiselw.timeinfo.preference.TrimmedEditTextPreference-->
+        <!--android:key="pref_username"-->
+        <!--android:title="@string/pref_title_username" />-->
+
+    <com.deiselw.timeinfo.preference.DatePreference
+        android:key="pref_birthday"
+        android:title="@string/pref_title_birthday"
+        android:summary="@string/pref_summary_birthday"
+        android:dialogLayout="@layout/view_date_picker" />
+
+    <com.deiselw.timeinfo.preference.NumberPickerPreference
+        android:key="pref_cal_years"
+        android:title="@string/pref_title_years"
+        android:dialogLayout="@layout/view_number_picker"
+        android:defaultValue="@integer/calendar_years_default"
+        app:minValue="@integer/calendar_years_min"
+        app:maxValue="@integer/calendar_years_max" />
+
+</PreferenceScreen>

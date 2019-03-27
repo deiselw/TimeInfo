@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:elevation="4dp"
+        android:background="@color/colorPrimary"
+        app:elevation="4dp"
+        app:titleTextColor="#fff"
+        app:title="@string/life_in_years_message"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <com.deiselw.timeinfo.view.OnePointerNestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <com.deiselw.timeinfo.view.TimeCalView
+            android:id="@+id/time_cal_years"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp" />
+
+    </com.deiselw.timeinfo.view.OnePointerNestedScrollView>
+</LinearLayout>

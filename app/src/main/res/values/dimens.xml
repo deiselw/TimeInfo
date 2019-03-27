@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="clock_max_width">340dp</dimen>
+
+    <dimen name="font_size_calendar">12sp</dimen>
+    <dimen name="font_size_clock">10sp</dimen>
+
+    <dimen name="clock_line_width">0.3dp</dimen>
+    <dimen name="clock_thumb_width">6dp</dimen>
+    <dimen name="clock_bar_width">3dp</dimen>
+    <dimen name="clock_track_width">1dp</dimen>
+    <dimen name="clock_top">16dp</dimen>
+</resources>

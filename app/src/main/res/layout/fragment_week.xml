@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.deiselw.timeinfo.view.WeekProgressBarView
+            android:id="@+id/view_clock"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/item_clock_trail"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="@dimen/clock_max_width" />
+
+        <TextView
+            style="@style/AppTheme.Display4"
+            android:id="@+id/text_percent_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/clock_top"
+            app:layout_constraintBottom_toBottomOf="@+id/view_clock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view_clock" />
+
+        <TextView
+            style="@style/AppTheme.SubheadLight"
+            android:id="@+id/text_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_percent_val"
+            app:layout_constraintLeft_toRightOf="@+id/text_percent_val" />
+
+        <TextView
+            style="@style/AppTheme.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/week"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toTopOf="@+id/text_percent_val"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="86dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_percent_val">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="@dimen/clock_bar_width"
+                android:background="@color/colorBar"
+                android:layout_marginRight="16dp"
+                app:layout_constraintRight_toLeftOf="@+id/text_days"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                style="@style/AppTheme.Headline"
+                android:id="@+id/text_time_val0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/text_days"
+                app:layout_constraintRight_toRightOf="@id/text_days" />
+
+            <TextView
+                style="@style/AppTheme.Headline"
+                android:id="@+id/text_time_val1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/text_hours"
+                app:layout_constraintRight_toRightOf="@id/text_hours" />
+
+            <TextView
+                android:id="@+id/text_days"
+                style="@style/AppTheme.CaptionLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/days"
+                android:textAllCaps="true"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/text_hours"
+                app:layout_constraintTop_toBottomOf="@id/text_time_val0" />
+
+            <TextView
+                android:id="@+id/text_hours"
+                style="@style/AppTheme.CaptionLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours"
+                android:textAllCaps="true"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/text_days"
+                app:layout_constraintTop_toBottomOf="@id/text_time_val1" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="100dp"
+            android:layout_height="0.5dp"
+            android:background="@color/colorText"
+            android:layout_marginHorizontal="64dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_time"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_time_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/view_divider">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="@dimen/clock_bar_width"
+                android:background="@color/colorTrack"
+                android:layout_marginRight="16dp"
+                app:layout_constraintRight_toLeftOf="@+id/text_days_left"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                style="@style/AppTheme.Headline"
+                android:id="@+id/text_time_left_val0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/text_days_left"
+                app:layout_constraintRight_toRightOf="@id/text_days_left" />
+
+            <TextView
+                style="@style/AppTheme.Headline"
+                android:id="@+id/text_time_left_val1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/text_hours_left"
+                app:layout_constraintRight_toRightOf="@id/text_hours_left" />
+
+            <TextView
+                android:id="@+id/text_days_left"
+                style="@style/AppTheme.CaptionLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/days"
+                android:textAllCaps="true"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/text_hours_left"
+                app:layout_constraintTop_toBottomOf="@id/text_time_left_val0" />
+
+            <TextView
+                android:id="@+id/text_hours_left"
+                style="@style/AppTheme.CaptionLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours"
+                android:textAllCaps="true"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/text_days_left"
+                app:layout_constraintTop_toBottomOf="@id/text_time_left_val1" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

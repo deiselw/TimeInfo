@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#1E88E5</color>
+    <color name="colorAccent">#2196f3</color>
+    <color name="colorText">#212121</color>
+    <color name="colorLine">#212121</color>
+    <color name="colorBar">#2196f3</color>
+    <color name="colorDisabled">#33000000</color>
+    <color name="colorTrack">#0d000000</color>
+    <color name="colorShadowLight">#0d000000</color>
+</resources>
+
+<!--
+colorPrimary - app branding color for the app bar
+colorPrimaryDark - darker variant of the colorPrimary for status bar and contextual app bars - just for android 5+
+colorAccent - theme UI controls like checkboxes, text fields, floating buttons
+colorControlNormal - change the normal state of unchecked boxes, etc.
+colorControlActivated - overrides colorAccent on activated/checked UI controls
+colorControlHighlight - ripple color
+
+87% = de
+54% = 8a
+50% = 7f
+20% = 33
+8% = 14
+5% = d
+-->
